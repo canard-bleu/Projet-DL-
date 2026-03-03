@@ -1,2 +1,2 @@
-# Projet DL
-ALED 
+# Projet DL : Normalizing Flow
+
