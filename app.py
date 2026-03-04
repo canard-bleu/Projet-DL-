@@ -64,7 +64,7 @@ def nice():
     num_hidden_layers = st.slider("Nb layers (couche additive)", min_value = 1, max_value = 8, value = 5)
     nb_add = st.slider("Nb couches additives", min_value = 1, max_value = 8, value = 4)
     lr = st.select_slider("Learning rate", options = [1e-5, 1e-4, 1e-3], value=1e-4)
-    epochs = st.slider("Epochs d'entraînement", min_value = 1, max_value = 100, alue = 2)
+    epochs = st.slider("Epochs d'entraînement", min_value = 1, max_value = 100, value = 2)
 
 
 
