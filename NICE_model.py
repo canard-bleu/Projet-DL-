@@ -103,13 +103,13 @@ class NICE(nn.Module):
         return h
 
 
-def checkpoint_paths(hid_dim, num_hid_lay, nb_add, lr):
+def checkpoint_paths(hid_dim, num_hid_lay, nb_add, lr, ep):
     """Return checkpoint and history paths for a NICE configuration."""
     if not os.path.exists("saved_models"):
         os.mkdir("saved_models")
     stem = (
         "saved_models/nice_mnist_hid="
-        f"{hid_dim}_layers={num_hid_lay}_add={nb_add}_lr={lr:.0e}"
+        f"{hid_dim}_layers={num_hid_lay}_add={nb_add}_lr={lr:.0e}_epochs={ep}"
     )
     return stem + ".pth", stem + "_history.pt"
 
@@ -124,7 +124,7 @@ def train_loop(dataloader, model, optimizer, epochs, device, progress_callback=N
         size = len(dataloader)
         for X, _ in dataloader:
             X = flatten(X.to(device))
-            noise = torch.rand_like(X)
+            noise = torch.rand_like(X).to(device)
             X = (255 * X + noise) / 256
 
             optimizer.zero_grad()
