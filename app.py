@@ -69,7 +69,7 @@ def nice():
 
 
     path_ckpt, path_history = NICE_model.checkpoint_paths(
-        hidden_dim, num_hidden_layers, nb_add, lr
+        hidden_dim, num_hidden_layers, nb_add, lr, epochs
     )
 
     if st.button("Effacer le modèle sauvegardé et ré-entraîner"):
