@@ -4,4 +4,12 @@ Ce repository contient le code servant au fonctionnement de l'application Stream
 
 Le script Model_NICE.py contient notre code du modèle ; le script app.py y fait appel et fait tourner l'application. 
 
+Les packages nécéssaires sont : 
+- os
+- streamlit
+- pandas
+- numpy
+- matplotlib.pyplot
+- torch
+
 - Justine Lesecq et Maëlle Sifferlin 
