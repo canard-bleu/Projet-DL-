@@ -11,5 +11,7 @@ Les packages nécéssaires sont :
 - numpy
 - matplotlib.pyplot
 - torch
+- torchvision
 
-- Justine Lesecq et Maëlle Sifferlin 
+
+Justine Lesecq et Maëlle Sifferlin 
